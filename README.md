@@ -1,41 +1,36 @@
-# Hi, I'm Sarah 👋
+# Hi, I'm Sara 👋
 
-I'm an MSc Computer Engineering student focused on **Machine Learning and AI**, with an interest in building practical, reproducible ML systems.
+🎓 MSc Computer Engineering Student
 
-Currently, I'm strengthening my ML engineering portfolio through hands-on projects involving model development, evaluation, automation, and cloud technologies.
+🔬 Interested in Machine Learning, AI Engineering & Data Science
 
-## 🛠 Tech Stack
+🐍 Building practical projects with Python, SQL, and machine learning.
 
-**Machine Learning & Data:**  
-Python • Pandas • NumPy • scikit-learn • XGBoost • LightGBM • CatBoost • SQL
+### What I'm working on
 
-**MLOps & Cloud:**  
-Docker • Git • GitHub Actions • Google Cloud • MLflow
+- **Machine Learning:** Model training, evaluation, and robustness
+- **Data Science:** Predictive analytics, data exploration, and model interpretation
+- **AI Engineering:** Learning LLM applications, RAG, and Python-based AI systems
+- **ML Engineering:** Reproducible workflows, automated testing, and CI/CD
 
-**Currently Learning:**  
-Kubernetes • Terraform • LLMs • RAG
+### Selected Projects
 
-## 🚀 Featured Projects
+**Gradient Boosting Classification**
+Comparing machine learning models using cross-validation, performance metrics, and feature ablation.
 
-### [Gradient Boosting for Tabular Classification](https://github.com/SARAHKAMYAR/gradient-boosting-classification)
+**Telco Customer Churn**
+Predicting customer churn and exploring the trade-offs between precision and recall.
 
-Reproducible comparison of **XGBoost, LightGBM, and CatBoost** on two classification datasets, with baseline models, cross-validation, held-out testing, feature analysis, and automated checks.
+**ML Resource Drift Sentinel**
+Detecting schema changes with a Python CLI and automated CI tests.
 
-`Python` `scikit-learn` `XGBoost` `LightGBM` `CatBoost` `GitHub Actions`
+**Model Weather**
+Exploring how input noise affects regression model performance.
 
-### [ML Resource Drift Sentinel](https://github.com/SARAHKAMYAR/ml-resource-drift-sentinel)
+### Currently Learning
 
-ML/data monitoring project for detecting schema and resource changes and surfacing alerts through DataHub.
+PyTorch · LLM Applications · Retrieval-Augmented Generation
 
-`Python` `DataHub` `ML Monitoring`
+### Open to Opportunities
 
-## 🎯 Current Focus
-
-I'm currently looking for opportunities in:
-
-- Machine Learning Engineering
-- AI Engineering
-- MLOps
-- ML/AI Internships
-
-I'm especially interested in projects that connect **machine learning, cloud infrastructure, and production ML systems**.
+ML/AI Engineering and Data Science internships and junior-level positions.
