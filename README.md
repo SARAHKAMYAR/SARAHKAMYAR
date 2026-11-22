@@ -22,6 +22,18 @@ Detects and counts red cells, white cells and platelets in microscopy images, ma
 
 <a href="https://github.com/SARAHKAMYAR/blood-cell-visionops"><img src="https://raw.githubusercontent.com/SARAHKAMYAR/blood-cell-visionops/main/docs/assets/dashboard.png" alt="Blood Cell VisionOps review dashboard showing cell counts, QC status and detections" width="720"></a>
 
+### ⚖️ [Groundtruth](https://github.com/SARAHKAMYAR/groundtruth): retrieval evaluation for a legal RAG assistant
+
+Measures whether a change to a RAG retriever made it better or worse, and blocks the pull request when it got worse. Runs on a 100-query golden set where every answer is tied to an exact passage in a 430-document legal corpus.
+
+- **recall@10 from 0.695 to 0.960** (+26.5 pts, 95% CI [+18.5, +35.0]), chosen from **16 retriever configs**: BM25, dense, hybrid, reranker and chunk-size variants
+- **Citation lookups from 0.21 to 0.87** recall@10: the statute and docket queries that dense-only search missed
+- **CI regression gate** fails any PR that drops recall@10 by more than 1 point. A "harmless" chunk-size change was [caught at −5.5 pts](https://github.com/SARAHKAMYAR/groundtruth/blob/main/docs/CI_GATE_DEMO.md)
+- **Honest about the result:** estimates ~1.7 pts of optimism from picking the winner on the same queries, and reports that plain BM25 with document headers is statistically tied on recall ([why hybrid was still chosen](https://github.com/SARAHKAMYAR/groundtruth/blob/main/docs/RECOMMENDATION.md))
+- LLM-judge generation layer (faithfulness, answer relevance) is built and tested, but its scores have not been measured yet
+
+`Python` `sentence-transformers` `BM25` `BGE` `pytest` `GitHub Actions` · Fictional corpus, the method transfers to a real archive
+
 ### 🏠 [Real Estate RAG Chatbot](https://github.com/SARAHKAMYAR/Real-Estate-RAG-Chatbot)
 
 Answers questions from documents and property listings, citing the sources it retrieved.
@@ -44,7 +56,9 @@ Answers questions from documents and property listings, citing the sources it re
 
 **ML and computer vision:** PyTorch · Ultralytics YOLO · ONNX Runtime · scikit-learn · XGBoost · LightGBM · pandas
 
-**LLM and retrieval:** RAG · hybrid search · pgvector · tool calling · structured outputs · Gemini API
+**LLM and retrieval:** RAG · hybrid search (BM25 + dense, RRF) · rerankers · pgvector · sentence-transformers · tool calling · structured outputs · Gemini API
+
+**Evaluation:** recall@k · MRR · nDCG · bootstrap confidence intervals · LLM-as-judge validation · CI regression gates
 
 **Engineering:** Python · FastAPI · Pydantic · PostgreSQL · SQL · Docker Compose · GitHub Actions · pytest · Streamlit
 
